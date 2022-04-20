@@ -1,0 +1,79 @@
+ <! please put module.html, login.html, record.html, manual.html, and about us.html on the same folder to run the html. and also the background pictures. ->
+ <html>   
+	<head>  
+		<meta name="viewport" content="width=device-width, initial-scale=1">  
+		<title> Login Page </title>  
+	<style>   
+		Body {  
+			font-family: Times New Roman;   
+			background-image: url('bg.jpg');
+		}  
+		button {   
+			background-color: #0000FF;   
+			width: 100%;  
+			color: orange;   
+			padding: 15px;   
+			margin: 10px 0px;   
+			border: none;   
+			cursor: pointer;   
+        }   
+		form {   
+			border: 3px solid black;   
+		}   
+		input[type=text], input[type=password] {   
+			width: 100%;   
+			margin: 8px 0;  
+			padding: 12px 20px;   
+			display: inline-block;   
+			border: 2px solid black;   
+			box-sizing: border-box;   
+		}  
+		button:hover {   
+			opacity: 0.7;   
+		}   
+		.cancelbtn {   
+			width: auto;   
+			padding: 10px 18px;  
+			margin: 10px 5px;  
+		}     
+		.container {   
+			padding: 25px;  
+			background-image: url('bg.jpg');
+		}   
+	</style>   
+	<script>
+		function Login() {
+		
+			var username=document.getElementById("username").value;
+			if (username == "") {
+				alert("Please Enter Username");
+			}else {
+				alert("Log In Successful");
+			}
+			
+			var password=document.getElementById("password").value;
+			if (password == "") {
+				alert("Please Enter Password");
+			}
+		};
+	</script>
+	</head>    
+	<body>   
+		<center> <h1 style="font-size: 75;"> ADMIN LOGIN </h1></center>   
+		<form>  
+			<div class="container">   
+				<label>Admin Username : </label>   
+				<input type="text" placeholder="Enter Admin Username" name="username" required>  
+				<br>
+				<label>Password : </label>   
+				<input type="password" placeholder="Enter Password" name="password" required>  
+				<a href="Login.html">
+				<button type="button">Login</button>   
+				</a>
+				<input type="checkbox" checked="checked">  Remember me   
+				<button type="button" class="cancelbtn"> Cancel</button>   
+				Forgot <a href="#"> password? </a>   
+			</div>   
+		</form>     
+	</body>     
+</html>  
